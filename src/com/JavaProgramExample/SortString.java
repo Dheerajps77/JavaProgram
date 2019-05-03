@@ -8,7 +8,7 @@ public class SortString {
 	
 	public static void SortStringProgram()
 	{
-		String[] str={"Thanos", "Captain", "Tony Stark", "Thor","Barton", "Avengers"};
+		String[] str={"Thanos", "Captain", "Tony Stark", "Thor","Barton", "Avengers","Dr. Strange"};
 		int totalLength=str.length;
 		String temp="";
 		
