@@ -10,7 +10,7 @@ public class PrimeNumber {
 
 	public static void CheckPrimeNumber() {
 		try {
-			int n = 7, n1 = 0;
+			int n = 10, n1 = 0;
 			boolean flag = false;
 			for (int i = 2; i < n - 1; i++) {
 				if (n % i == 0) {
