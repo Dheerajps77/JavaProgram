@@ -27,7 +27,9 @@ public class SortNumber {
 				}				
 			}
 			System.out.println(g[i]);
+			//System.out.println(g[g.length-3]);
 		}
+		System.out.println();		
 	}
 
 }

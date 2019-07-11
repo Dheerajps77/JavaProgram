@@ -23,8 +23,7 @@ public class IfStringIsNumberOrString {
 		int totalLength=c.length;
 		boolean flag=false;
 		for(int i=0;i<totalLength;i++)
-		{
-			
+		{			
 			if(Character.isAlphabetic(c[i]))
 			{
 				flag=true;
