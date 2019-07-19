@@ -105,6 +105,8 @@ OutPut for PrintStar1()
 	
 	public static void FunnelPattern()
 	{
+		// Creating diamonds pattern by calling PyramidPattern() method in FunnelPattern()
+		PyramidPattern();
 		try {
 			
 			int n=10;
@@ -222,7 +224,7 @@ OutPut for PyramidPattern()
 *********	
 */	
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		FunnelPattern();
 	}
 
