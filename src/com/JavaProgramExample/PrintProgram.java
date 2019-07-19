@@ -3,7 +3,7 @@ package com.JavaProgramExample;
 public class PrintProgram {
 	
 	
-	public static void PrintStar1()
+	public static void RightAngle()
 	{
 		try {
 			int n=10;
@@ -20,7 +20,7 @@ public class PrintProgram {
 		}
 		
 /*		
-OutPut for PrintStar1()
+OutPut for RightAngle()
 *
 **
 ***

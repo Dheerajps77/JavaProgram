@@ -4,7 +4,7 @@ public class SmallestAndLargestNumber {
 
 	public static void main(String[] args) {
 
-		CheckSmallestAndLargestNumber();
+		CheckFibnoacciNumber();
 
 	}
 
@@ -14,7 +14,7 @@ public class SmallestAndLargestNumber {
 			int j=1;
 			
 			
-			for(int l=0;l<10;l++)
+			for(int a=0;a<10;a++)
 			{
 				System.out.println(i);
 				int k=i+j;

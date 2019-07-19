@@ -10,7 +10,7 @@ public class PrimeNumber {
 
 	public static void CheckPrimeNumber() {
 		try {
-			int n = 10, n1 = 0;
+			int n = 6, n1 = 0;
 			boolean flag = false;
 			for (int i = 2; i < n - 1; i++) {
 				if (n % i == 0) {
@@ -19,10 +19,10 @@ public class PrimeNumber {
 				}
 			}
 
-			if (flag) {
-				System.out.println(n + " number is not prime");
-			} else {
+			if (!flag) {
 				System.out.println(n + " number is prime");
+			} else {
+				System.out.println(n + " number is not prime");
 			}
 		} catch (
 
