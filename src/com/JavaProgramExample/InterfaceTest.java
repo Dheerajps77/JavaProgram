@@ -23,6 +23,14 @@ public class InterfaceTest implements Interface1{
 		Interface1.Test2();
 		
 	}
+
+
+
+	@Override
+	public void test3() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
 
