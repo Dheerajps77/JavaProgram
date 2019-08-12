@@ -2,7 +2,30 @@ package com.JavaProgramExample;
 
 public class StringClass {
 
+	static String str="Harish";
 	public static void main(String[] args) {
+		
+		StringClass s=new StringClass();
+		s.str="Dheeraj";
+		
+		
+		StringClass s1=new StringClass();
+		s1.str="Mohit";
+		
+		StringClass s2=new StringClass();
+		s2.str="Priya";
+
+		StringClass s4=new StringClass();
+		s4.str="Sohit";
+
+		StringClass s3=new StringClass();
+		s3.str="raju";
+		
+		System.out.println(s2.str);
+		
+		/*Output :
+		 * raju
+		 */
 		
 		/*
 		String str = "Hello";
@@ -24,24 +47,25 @@ public class StringClass {
 		 * guys
 		 */
 		
-		String string="Hello";
-		String string2="Hello";
-		
-		string2="Hello".toUpperCase();
-		System.out.println(string2);
-		
-		
-		
-		String string3=new String(string);
-		System.out.println("The value before concat : " + string3);
+		  String string="Hello"; String string2="Hello";
+		  
+		  string2="Hello".toUpperCase(); System.out.println(string2);
+		  
+		 
+		  
+		  String string3=new String(string);
+		  System.out.println("The value before concat : " + string3);
 		string3=string3.concat(" guys");
-		System.out.println("The value after concat : " + string3);
+		 System.out.println("The value after concat : " + string3);
+		 
 		/*
 		 * 
 		 * The value before concat : Hello
 		   The value after concat : Hello guys
 		 * 
 		 */
+		
+		
 		
 
 	}
