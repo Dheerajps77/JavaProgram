@@ -13,8 +13,7 @@ public class RemoveCharcFromNumber {
 	{
 		System.out.println("The actual value of string with number is "+ str);
 		StringBuffer sb=new StringBuffer(str);
-		
-		
+				
 		for(int i=0;i<sb.length();i++)
 		{
 			if(sb.charAt(i)<48 || sb.charAt(i)>57)
