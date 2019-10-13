@@ -10,10 +10,23 @@ public class RemoveCharcFromNumber {
 		String str="786sa90as";
 		//CheckCharInNumbers(str);
 		//printCharOnly();
-		printOnlySepcificWordInString();
+		countWordsInString();
 	}
 	
-	
+	public static void countWordsInString()
+	{
+		String words="Hello I am new to Java";		
+		int temp=1;
+		for(int i=0;i<words.length()-1;i++)
+		{
+			String str=words.substring(i, i+1);
+			if(words.charAt(i)== ' ' && words.charAt(i+1)!=' ')
+			{
+				temp++;
+			}
+		}
+				System.out.println(temp);
+	}
 	
 	public static void printOnlySepcificWordInString()
 	{
