@@ -10,7 +10,7 @@ public class RemoveCharcFromNumber {
 		String str="786sa90as";
 		//CheckCharInNumbers(str);
 		//printCharOnly();
-		countWordsInString();
+		printCharOnly();
 	}
 	
 	public static void countWordsInString()
@@ -58,7 +58,7 @@ public class RemoveCharcFromNumber {
 		int totalCOunt=str.length();
 		for(int i=0;i<totalCOunt;i++)
 		{
-			if(str.charAt(i)>96 && str.charAt(i)<123)
+			if(str.charAt(i)>47 && str.charAt(i)<57)
 			{
 				System.out.print(str.charAt(i));
 			}
@@ -79,7 +79,5 @@ public class RemoveCharcFromNumber {
 		}
 		System.out.println("Actual number after removed number from string is :"+sb.toString());
 	}
-	
-	
 	
 }
