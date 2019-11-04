@@ -3,6 +3,7 @@ package com.JavaProgramExample;
 public interface Interface1 {
 	
 	int n=10;
+		
 	default void Test1()
 	{
 		System.out.println("Interface test 1");

@@ -30,6 +30,35 @@ public class NumberOfWordsInStrings {
 			throw e;
 		}
 	}
+	
+	
+	
+	public static void replaceWordsInString()
+	{
+		try {
+			
+			String originalWord="This is car and i want this car";			
+			char[]c=originalWord.toCharArray();
+			String[] stringValue;
+			String updatedStringValue="";
+			
+			int count=c.length;
+			
+			for(int i=0;i<originalWord.length();i++)
+			{
+				stringValue=originalWord.split(" ");
+				if(stringValue[i].contains("car"))
+				{
+					stringValue[i]="bus";					
+				}
+				updatedStringValue=updatedStringValue+stringValue[i];
+			}
+			System.out.println(updatedStringValue);
+			
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 
 	public static void replaceParticularWordInStringWithoutReplaceFunctions(String str, String from, String to) {
 		String str1 = "";
@@ -50,8 +79,9 @@ public class NumberOfWordsInStrings {
 
 	public static void main(String[] args) {
 		String str = "I am noob in PUBG and noob cant play PUBG";
-		 numberOfWords(str);
+		 //numberOfWords(str);
 		// replaceParticularWordInString(str);
 		//replaceParticularWordInStringWithoutReplaceFunctions(str, "PUBG", "Pro");
+		replaceWordsInString();
 	}
 }

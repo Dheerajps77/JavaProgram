@@ -3,8 +3,7 @@ package com.JavaProgramExample;
 
 public class InterfaceTest implements Interface1{
 
-	
-	
+		
 	public void Test1()
 	{
 		System.out.println("Class test 1");

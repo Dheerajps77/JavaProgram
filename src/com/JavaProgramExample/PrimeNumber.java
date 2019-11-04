@@ -10,16 +10,15 @@ public class PrimeNumber {
 
 	public static void CheckPrimeNumber() {
 		try {
-			int n = 8, n1 = 0;
-			boolean flag = false;
+			int n = 13, n1 = 0;
+			boolean flag = true;
 			for (int i = 2; i < n - 1; i++) {
-				if (n % i == 0) {
-					n1 = n1++;
-					flag = true;
+				if (n % i == 0) {					
+					flag = false;
 				}
 			}
 
-			if (!flag) {
+			if (flag) {
 				System.out.println(n + " number is prime");
 			} else {
 				System.out.println(n + " number is not prime");
