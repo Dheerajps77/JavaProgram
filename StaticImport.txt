@@ -1,0 +1,1 @@
+Static import allows you to access the static member of a class directly without using the fully qualified name.
