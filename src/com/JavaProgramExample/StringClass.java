@@ -2,26 +2,25 @@ package com.JavaProgramExample;
 
 public class StringClass {
 
-	static String str="Harish";
+	String str="Harish";
 	public static void main(String[] args) {
 		
 		StringClass s=new StringClass();
 		s.str="Dheeraj";
 		
-		
+		//System.out.println("s object : "+str);
 		StringClass s1=new StringClass();
 		s1.str="Mohit";
-		
+		//System.out.println("s1 object : "+str);
 		StringClass s2=new StringClass();
 		s2.str="Priya";
-
+		//System.out.println("s2 object : "+str);
 		StringClass s4=new StringClass();
 		s4.str="Sohit";
-
+		//System.out.println("s4 object : "+str);
 		StringClass s3=new StringClass();
 		s3.str="raju";
-		
-		System.out.println(s2.str);
+		System.out.println("s3 object : "+s.str);
 		
 		/*Output :
 		 * raju

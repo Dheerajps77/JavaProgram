@@ -11,7 +11,7 @@ public class StaticString {
 		StaticString s3=new StaticString();		
 		s3.s1="When";
 		
-		System.out.println(s3.s1);
+		System.out.println(StaticString.s1);
 	}
 
 }
