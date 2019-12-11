@@ -41,7 +41,7 @@ public class WordReplace {
 	}
 
 	public static void replaceRepeatedWordPrint() {
-		String str = "Hello guys . Whats up guys ? guys ";
+		String str = "Hello guys . Whats up guys ? Chai pilo guys. Cricket Khelo guys ";
 
 		System.out.println("Actual :--> " + str);
 		StringBuilder sb = new StringBuilder();
@@ -60,8 +60,10 @@ public class WordReplace {
 		}
 
 		/*
-		 * OutPut :- Actual :--> Hello guys . Whats up guys ? guys Updated :-->
-		 * Hello boy . Whats up boy ? boy
+		 OutPut
+		Actual :--> Hello guys . Whats up guys ? Chai pilo guys. Cricket Khelo guys 
+		Updated :--> Hello boy . Whats up boy ? Chai pilo boy. Cricket Khelo boy
+
 		 * 
 		 */
 	}
@@ -85,7 +87,7 @@ public class WordReplace {
 	}
 
 	public static void main(String[] args) {
-		testString();
+		replaceRepeatedWordPrint();
 
 	}
 }
