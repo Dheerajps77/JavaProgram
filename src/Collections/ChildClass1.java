@@ -4,6 +4,8 @@ class ChildClass1 extends MethodOverriding
 {
 	public void MethodName() {
 		System.out.println("Child Class");
+		
+		
 	}
 	
 	public String MethodName1()
