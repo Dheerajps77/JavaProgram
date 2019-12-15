@@ -41,6 +41,7 @@ public class ConstructorObjectInArrays {
 			}
 			
 			// To print lowest marks
+			/*
 			if (studentArray.length - 1 > i) {
 				if (studentArray[i].marks < studentArray[i + 1].marks) {
 					{
@@ -49,6 +50,14 @@ public class ConstructorObjectInArrays {
 					}
 				}
 			}
+			*/
+			int low=studentArray[0].marks;
+			if(studentArray[i].marks<low)
+			{
+				lowest=studentArray[i].marks;
+				rolOfLowestValue = studentArray[i].rollNumber;
+			}
+			
 		}
 		System.out.println("Highest number " + highest + " of roll number is  : " + rolOfHighestValue);
 		System.out.println("Lowest number " + lowest + " of roll number is  : " + rolOfLowestValue);		
