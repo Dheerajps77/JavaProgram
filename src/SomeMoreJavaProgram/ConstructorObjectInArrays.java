@@ -3,13 +3,13 @@ package SomeMoreJavaProgram;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Student {
+public class ConstructorObjectInArrays {
 
 	String studName;
 	int rollNumber;
 	int marks;
 
-	Student(String studName, int rollNumber, int marks) {
+	ConstructorObjectInArrays(String studName, int rollNumber, int marks) {
 		this.studName = studName;
 		this.rollNumber = rollNumber;
 		this.marks = marks;
@@ -19,17 +19,17 @@ public class Student {
 
 	public static void main(String[] args) {
 
-		Student[] studentArray = new Student[10];
-		studentArray[0] = new Student("Rahul Singh", 21, 600);
-		studentArray[1] = new Student("Dheeraj Pratap Singh", 22, 322);
-		studentArray[2] = new Student("Arun Gupta", 23, 467);
-		studentArray[3] = new Student("Priynka Rana", 24, 413);
-		studentArray[4] = new Student("Akash Kumar", 25, 490);
-		studentArray[5] = new Student("Vinod Singh", 26, 123);
-		studentArray[6] = new Student("Saurav Kumar", 27, 322);
-		studentArray[7] = new Student("Kanchan Singh", 28, 292);
-		studentArray[8] = new Student("Pooja  Singh", 29, 132);
-		studentArray[9] = new Student("Neetu Singh", 30, 214);
+		ConstructorObjectInArrays[] studentArray = new ConstructorObjectInArrays[10];
+		studentArray[0] = new ConstructorObjectInArrays("Rahul Singh", 21, 600);
+		studentArray[1] = new ConstructorObjectInArrays("Dheeraj Pratap Singh", 22, 322);
+		studentArray[2] = new ConstructorObjectInArrays("Arun Gupta", 23, 467);
+		studentArray[3] = new ConstructorObjectInArrays("Priynka Rana", 24, 413);
+		studentArray[4] = new ConstructorObjectInArrays("Akash Kumar", 25, 490);
+		studentArray[5] = new ConstructorObjectInArrays("Vinod Singh", 26, 123);
+		studentArray[6] = new ConstructorObjectInArrays("Saurav Kumar", 27, 322);
+		studentArray[7] = new ConstructorObjectInArrays("Kanchan Singh", 28, 292);
+		studentArray[8] = new ConstructorObjectInArrays("Pooja  Singh", 29, 132);
+		studentArray[9] = new ConstructorObjectInArrays("Neetu Singh", 30, 214);
 
 		int sum = 0, highest = 0, rolOfHighestValue = 0, rolOfLowestValue = 0, lowest = 0, temp = 1;
 		for (int i = 0; i < studentArray.length; i++) {
