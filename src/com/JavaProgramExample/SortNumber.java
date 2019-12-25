@@ -9,7 +9,7 @@ public class SortNumber {
 
 	public static void SortNumberProgram()
 	{
-		int[] g={3,67,8,98,2,123,5,1};
+		int[] g={3,67,8,98,2,123,5,1,0};
 		
 		int totalLength=g.length;
 		int temp=0;
@@ -27,9 +27,9 @@ public class SortNumber {
 				}				
 			}
 			System.out.println(g[i]);
-			//System.out.println(g[g.length-3]);
 		}
-		System.out.println();		
+		System.out.println();
+		System.out.println(g[g.length-3]);// will print the 3rd highest number
 	}
 
 }
