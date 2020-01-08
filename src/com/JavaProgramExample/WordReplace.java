@@ -2,7 +2,8 @@ package com.JavaProgramExample;
 
 public class WordReplace {
 
-	public static void repeatedStringCount() {
+	final static int n=20;
+	public final static void repeatedStringCount() {
 		String str = "Hello guys . Whats up guys ? guys ";
 
 		try {
