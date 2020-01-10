@@ -8,7 +8,7 @@ class AnonymousClass {
 
 	public static void main(String[] args) {
 
-		Test test = new Test() {
+		Test22 test = new Test22() {
 
 			@Override
 			public void Method1() {
