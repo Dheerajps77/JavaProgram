@@ -1,8 +1,5 @@
 package SomeMoreJavaProgram;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class ConstructorObjectInArrays {
 
 	String studName;
