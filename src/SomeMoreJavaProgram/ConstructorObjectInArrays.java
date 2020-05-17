@@ -10,8 +10,6 @@ public class ConstructorObjectInArrays {
 		this.studName = studName;
 		this.rollNumber = rollNumber;
 		this.marks = marks;
-
-		// System.out.println(studName + " " + rollNumber + " " + marks);
 	}
 
 	public static void main(String[] args) {
