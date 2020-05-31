@@ -34,6 +34,15 @@ public class DuplicateValues {
 		} catch (Exception e) {
 			throw e;
 		}
+		
+		/***
+		 * OutPut Below :
+		 * 1 : repeated count is : 2
+		   2 : repeated count is : 1
+		   3 : repeated count is : 3
+		   5 : repeated count is : 2
+		   7 : repeated count is : 1
+		 */
 	}
 	
 	public static void duplicateValueCountForString(String[] s)
@@ -66,13 +75,22 @@ public class DuplicateValues {
 		} catch (Exception e) {
 			throw e;
 		}
+		
+		/***
+		 * OutPut Below :
+		 * Lost : repeated count is : 1
+		   Hi : repeated count is : 1
+		   No : repeated count is : 2
+		   Hello : repeated count is : 2
+		   Bye : repeated count is : 1
+		 */
 	}
 
 	public static void main(String[] args) {
 		int[] n = { 3, 5, 3, 7, 2, 3, 5, 1 , 1};
 		String[] str={"Hello", "Hi", "No", "Hello", "Bye", "No", "Lost"};
-		//findCountOfDuplicateNumber(n);
-		duplicateValueCountForString(str);
+		findCountOfDuplicateNumber(n);
+		//duplicateValueCountForString(str);
 
 	}
 }
