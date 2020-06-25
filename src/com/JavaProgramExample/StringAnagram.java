@@ -1,37 +1,35 @@
 package com.JavaProgramExample;
 
-import java.util.Arrays;
 
 public class StringAnagram {
 
-	public static boolean StringAnagramFunction(String str, String str2) {
-		boolean flag = false;
-		try {			
-			String str4=str.toLowerCase();
-			String str5=str2.toLowerCase();			
-			char[] c1 = str4.toCharArray();
-			char[] c2 = str5.toCharArray();
-			
-			int c1Length = c1.length;
-			int c2Length = c2.length;
-			if (c1Length == c2Length) {
-				Arrays.sort(c1);
-				Arrays.sort(c2);
-				System.out.println(c1);
-				System.out.println(c2);
-				for (int i = 0; i < c1Length; i++) {
-					if (c1[i] == c2[i]) {
-						flag = true;
-					}
-					else {
-						return flag=false;
-					}
+	public static void anagram() {
+		String str1 = "dheeraj";
+		String str2 = "jareehd";
+		String str3 = "";
+		try {
+
+			char[] c1 = str1.toCharArray();
+			char[] c2 = str2.toCharArray();
+
+			if (c1.length == c2.length) {
+				for (int i = str1.length() - 1; i >= 0; i--) {
+					char c = str1.charAt(i);
+					str3 = str3 + c;
 				}
+
+				if (str3.equals(str2)) {
+					System.out.println(str1 + " and " + str2 + " is anagram");
+				} else {
+					System.out.println(str1 + " and " + str2 + " is not anagram");
+				}
+			} else {
+				System.out.println("Length dont match of both the string. Hence cannot make anagram");
 			}
+
 		} catch (Exception e) {
 			throw e;
 		}
-		return flag;
 	}
 
 	public static void StringReverse() {
@@ -51,16 +49,8 @@ public class StringAnagram {
 
 	public static void main(String[] args) {
 
-		String str = "Armyh";
-		String str2 = "Maryj";
-
-		boolean flag;
-		flag = StringAnagramFunction(str, str2);
-		if (flag) {
-			System.out.println(str + " is anagram to this string : " + str2);
-		}
-		System.out.println(str + " is not anagram to this string : " + str2);
-		StringReverse();
+		anagram();
+		// StringReverse();
 	}
 
 }
