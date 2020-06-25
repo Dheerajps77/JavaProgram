@@ -8,11 +8,7 @@ public class StringAnagram {
 		String str2 = "jareehd";
 		String str3 = "";
 		try {
-
-			char[] c1 = str1.toCharArray();
-			char[] c2 = str2.toCharArray();
-
-			if (c1.length == c2.length) {
+			if (str1.length() == str2.length()) {
 				for (int i = str1.length() - 1; i >= 0; i--) {
 					char c = str1.charAt(i);
 					str3 = str3 + c;
