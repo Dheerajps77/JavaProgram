@@ -10,8 +10,8 @@ public class StringAnagram {
 		try {
 			if (str1.length() == str2.length()) {
 				for (int i = str1.length() - 1; i >= 0; i--) {
-					char c = str1.charAt(i);
-					str3 = str3 + c;
+					str3 = str3+str1.charAt(i);
+					//str3=str3+str1.toCharArray()[i];
 				}
 
 				if (str3.equals(str2)) {
