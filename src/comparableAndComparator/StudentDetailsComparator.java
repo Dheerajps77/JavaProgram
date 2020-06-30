@@ -1,9 +1,4 @@
 package comparableAndComparator;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
 public class StudentDetailsComparator {
 	int roll_no;
 	String name;

@@ -3,9 +3,8 @@ package com.JavaProgramExample;
 public class NumberOfWordsInStrings {
 
 	public static void numberOfWords(String str) {
-		try {
-			String str1 = "";
-			int tmp = 1, word = 0;
+		try {			
+			int tmp = 1;
 			int totalCount = str.length() - 1;
 
 			for (int i = 0; i < totalCount; i++)
@@ -14,6 +13,33 @@ public class NumberOfWordsInStrings {
 					tmp++;
 				}
 			System.out.print("number of words found : " + tmp);
+		}
+
+		catch (Exception e) {
+			throw e;
+		}
+	}
+	
+	public static void numberOfWordsInStatement(String str) {
+		try {
+			int n=str.length();
+			System.out.println(n);
+		}
+
+		catch (Exception e) {
+			throw e;
+		}
+	}
+	
+	public static void numberOfWordInStatement(String str) {
+		try {
+					String[]st=str.split(" ");
+					int temp=0;
+					for(int i=0;i<st.length;i++)
+					{
+						++temp;
+					}
+					System.out.println(temp);
 		}
 
 		catch (Exception e) {
@@ -42,8 +68,6 @@ public class NumberOfWordsInStrings {
 			String[] stringValue;
 			String updatedStringValue="";
 			
-			int count=c.length;
-			
 			for(int i=0;i<originalWord.length();i++)
 			{
 				stringValue=originalWord.split(" ");
@@ -60,8 +84,7 @@ public class NumberOfWordsInStrings {
 		}
 	}
 
-	public static void replaceParticularWordInStringWithoutReplaceFunctions(String str, String from, String to) {
-		String str1 = "";
+	public static void replaceParticularWordInStringWithoutReplaceFunctions(String str, String from, String to) {		
 		int i = 0;
 		try {
 			String[] arr = str.split(from);
@@ -76,12 +99,29 @@ public class NumberOfWordsInStrings {
 			throw e;
 		}
 	}
+	
+	// THis is best possible solution for word replace in Strings
+	public static void replaceParticularWordInStringWithoutReplaceFunctions1(String str, String from, String to) {		
+		int i = 0;
+		try {
+			String[] arr = str.split(from);
+			StringBuilder output = new StringBuilder();
+			for (; i < arr.length - 1; i++)
+				output.append(arr[i]).append(to);
+			output.append(arr[i]);			
+				output.append(to);
+			System.out.println(output.toString());
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 
 	public static void main(String[] args) {
-		String str = "I am noob in PUBG and noob cant play PUBG";
-		 //numberOfWords(str);
+		String str = "I am noob in PUBG and noob cant play PUBG PUBG";
+		//numberOfWords(str);
+		numberOfWordInStatement(str);
 		// replaceParticularWordInString(str);
-		//replaceParticularWordInStringWithoutReplaceFunctions(str, "PUBG", "Pro");
-		replaceWordsInString();
+		//replaceParticularWordInStringWithoutReplaceFunctions1(str, "PUBG", "Pro");
+		//replaceWordsInString();
 	}
 }
