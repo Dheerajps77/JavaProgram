@@ -18,3 +18,8 @@ the value of s before concat is ABCD
 the value of s after concat is ABCDEFGH
 Here new object is created with s value as ABCDEFGH.
 Since strings are immutable the value cannot change but new object will be created with changed values.
+
+
+It is advised to use equals(), not ==, to compare two strings. 
+This is because == operator compares memory locations, 
+while equals() method compares the content stored in two objects.

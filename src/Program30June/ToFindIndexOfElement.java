@@ -1,6 +1,6 @@
 package Program30June;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class ToFindIndexOfElement {
 	
@@ -32,10 +32,31 @@ public class ToFindIndexOfElement {
 			throw e;
 		}
 	}
+	
+	
+	public static void toGetMiddleIndexByUsingScannerClass()
+	{
+		try {
+			
+			Scanner sc =new Scanner(System.in);
+			System.out.println("Enter the number you want to show in arrays");
+			int n=sc.nextInt();			
+			int arrayNumber[]=new int[n];			
+			for(int i=0;i<n;i++)
+			{
+				arrayNumber[i]=sc.nextInt();				
+			}
+			
+		} catch (Exception e) {
+			
+			
+		}
+	}
 	public static void main(String[] args) {
 		
 		
-		toFindIndexOfArray();
+		//toFindIndexOfArray();
+		toGetMiddleIndexByUsingScannerClass();
 	}
 
 }
