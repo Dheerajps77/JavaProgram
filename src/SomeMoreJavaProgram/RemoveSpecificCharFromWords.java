@@ -48,9 +48,9 @@ public class RemoveSpecificCharFromWords {
 			Scanner sc1=new Scanner(System.in);
 			String enterCharToBeRemove=sc1.nextLine();
 			
-			
 			StringBuilder sb=new StringBuilder(enterString);
 			System.out.println(sb.toString());
+			
 			HashMap<Character, Integer> table=new HashMap<Character, Integer>();
 			
 			for(int i=0;i<enterCharToBeRemove.length();i++)
