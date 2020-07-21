@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class RemoveSpecificCharFromWords {
 	
 	
+	private static Scanner sc;
+	private static Scanner sc1;
 	public static void removeCharFromWordsWithoutInBuiltFunctions(String str, char whichCharNeedToRemove, char whichCharNeedToRemove1)
 	{
 		char cd=' ';
@@ -41,11 +43,11 @@ public class RemoveSpecificCharFromWords {
 		try {
 			
 			System.out.println("Enter the strings : ");
-			Scanner sc=new Scanner(System.in);
+			sc = new Scanner(System.in);
 			String enterString=sc.nextLine();
 			
 			System.out.println("Enter words to be removed : ");
-			Scanner sc1=new Scanner(System.in);
+			sc1 = new Scanner(System.in);
 			String enterCharToBeRemove=sc1.nextLine();
 			
 			StringBuilder sb=new StringBuilder(enterString);

@@ -65,7 +65,7 @@ public class DuplicateWordsInArrayString {
 	}
 	public static void main(String[] args) {
 		
-		String str="Hello everyone . I hope everyone is fine. everyone ... all good now ?? hope";		
+		String str="Hello everyone . I hope everyone is fine . everyone . all good now ?? hope";		
 		DuplicateWordsInArrayString.duplicateWordsWithCountNumber(str);
 	}
 
