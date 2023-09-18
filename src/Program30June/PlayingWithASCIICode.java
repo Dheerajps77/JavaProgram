@@ -36,7 +36,7 @@ public class PlayingWithASCIICode {
 	}
 	public static void main(String[] args) {
 		
-		toGetASCIICharacterOfParticularNumber();
+		toGetASCIICodeOfParticularCharacters();
 	}
 
 }

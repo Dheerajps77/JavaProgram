@@ -52,7 +52,7 @@ public class DuplicateWordsOcc {
 
 	public static void main(String args[]) {
 		DuplicateWordsOcc ob1 = new DuplicateWordsOcc();	
-		String str="Dheeraj Pratap Singh";
+		String str="Dheeraj PrataP Singh";
 		char[] c=str.toCharArray();
 		char g=firstRepeating(c);
 		System.out.print("Repeated char : "+g);

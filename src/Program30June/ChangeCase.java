@@ -47,7 +47,7 @@ public class ChangeCase {
 		
 		String str="DHeeRAJ";
 		toLowerCase(str);
-		toUparCase(str);
+		//toUparCase(str);
 	}
 
 }

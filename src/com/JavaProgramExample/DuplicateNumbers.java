@@ -4,8 +4,13 @@ public class DuplicateNumbers {
 	
 	public static void main(String[] args) {
 		
-		CheckDuplicateNumber();
-	}		
+		CheckDuplicateString();
+	}	
+	
+	
+	
+	
+	
 		
 	public static void CheckDuplicateNumber()
 	{
@@ -38,11 +43,11 @@ public class DuplicateNumbers {
 	{
 		try {
 			
-			String[] strings= {"Hello", "Hi", "Bye", "Hello"};
+			String[] strings= {"Hello", "Hi", "Bye", "Hello", "Hi"};
 			
 			for(int i=0;i<strings.length;i++)
 			{
-				for(int j=i+1;i<strings.length;j++)
+				for(int j=i+1;j<strings.length;j++)
 				{
 					if(strings[i].equals(strings[j]))
 					{

@@ -10,11 +10,11 @@ public class PrimeNumber {
 
 	public static void CheckPrimeNumber() {
 		try {
-			int n = 14, n1 = 0;
+			int n = 13, n1 = 0;
 			boolean flag = true;
 			for (int i = 2; i < n - 1; i++) {
 				if (n % i == 0) {					
-					flag = false;
+					flag = false;	
 				}
 			}
 
