@@ -8,7 +8,8 @@ public class StringReplaceWithSpecificWords {
 			StringBuffer sb = new StringBuffer();
 
 			for (int i = 0; i < strArray.length; i++) {
-				sb.append(strArray[i]).append(to);				
+				sb.append(strArray[i]);
+				sb.append(to);				
 			}
 
 			System.out.println(sb.toString());
@@ -20,7 +21,7 @@ public class StringReplaceWithSpecificWords {
 	public static void main(String[] args) {
 
 		String str = "Hello world, github world, java world, python world";
-		stringReplace(str, "duniya ", "world");
+		stringReplace(str, "hat be ", "python");
 	}
 	
 	/***

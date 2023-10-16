@@ -35,17 +35,6 @@ public class ConstructorObjectInArrays {
 				rolOfHighestValue = studentArray[i].rollNumber;
 			}
 			
-			// To print lowest marks
-			/*
-			if (studentArray.length - 1 > i) {
-				if (studentArray[i].marks < studentArray[i + 1].marks) {
-					{
-						lowest = studentArray[i].marks;
-						rolOfLowestValue = studentArray[i].rollNumber;
-					}
-				}
-			}
-			*/
 			int low=studentArray[0].marks;
 			if(studentArray[i].marks<low)
 			{

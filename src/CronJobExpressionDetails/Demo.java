@@ -37,7 +37,7 @@ public class Demo {
 	public static void method3()
 	{
 		try {			
-			double[] myList={1,5,5,5,5,1};
+			double[] myList={1,5,45,5,5,1};
 			double max=myList[0];
 			int indexOfMax=0;
 			for(int i=1;i<myList.length;i++)
@@ -48,7 +48,7 @@ public class Demo {
 					indexOfMax=i;
 				}
 			}
-			System.out.println(indexOfMax);
+			System.out.println(max);
 		} catch (Exception e) {
 			throw e;
 		}

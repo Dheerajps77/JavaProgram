@@ -33,9 +33,9 @@ public class ReverseOrderOfWords {
 
 			// String str="Abhishek Jain";
 			String[] stringArray = str.split(" ");
-
-			for (int i = stringArray.length - 1; i >= 0; i--) {
-				if (i != stringArray.length - 1) {
+			int lengthOfArray=stringArray.length - 1;
+			for (int i = lengthOfArray; i >= 0; i--) {
+				if (i != lengthOfArray) {
 					reverseOrder = reverseOrder + " " + stringArray[i];
 				} else {
 					reverseOrder = reverseOrder + stringArray[i];

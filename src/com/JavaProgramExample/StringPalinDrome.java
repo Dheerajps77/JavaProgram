@@ -12,7 +12,7 @@ public class StringPalinDrome {
 	{
 		try
 		{
-			String ab="nan";
+			String ab="tatat";
 			String temp=ab;
 			String g="";
 			int totalLength=ab.length();

@@ -11,6 +11,15 @@ import java.util.Set;
 public class RemoveDuplicateString {
 	
 	
+	public static void removeDuplicateUsingLinkedHashsetMethod()
+	{
+		try {
+			
+		} catch (Exception e) {
+			throw e;
+		}
+	}
+	
 	public static void removeDuplicateString()
 	{
 		String str[]={"Hello", "No", "Yes", "Hello", "Dilwali", "Khatt", "Khatt", "What"};

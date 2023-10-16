@@ -50,7 +50,8 @@ public class WordReplace {
 
 			String[] str1 = str.split("guys");
 			for (int i = 0; i < str1.length - 1; i++) {
-				sb.append(str1[i]).append("boy");
+				sb.append(str1[i]);
+				sb.append("boy");
 				if (str.substring(str.lastIndexOf(" ")).equalsIgnoreCase(" " + "guys")) {
 					sb.append("boy");
 				}
