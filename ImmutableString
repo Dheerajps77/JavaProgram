@@ -1,0 +1,25 @@
+Strings are immutable which means the value or data will not change. When we perform an operation on strings we cant change its value, 
+but new object is created.
+Ex: 
+String s=new String("ABCD");
+s.concat("EFGH");
+System.out.println(s);
+Output:
+ABCD
+The value of string s is not changed because strings are immutable but new object will be created with string s value as "ABCDEFGH". 
+If we assign the s value of s to a variable then the value of an is displayed in the output.
+EX:
+String s new String("ABCD");
+System.out.println("the value of s before concat is"+s);
+s=s.concat("EFGH");
+System.out.println("the value of s after concat is"+s);
+Output:
+the value of s before concat is ABCD
+the value of s after concat is ABCDEFGH
+Here new object is created with s value as ABCDEFGH.
+Since strings are immutable the value cannot change but new object will be created with changed values.
+
+
+It is advised to use equals(), not ==, to compare two strings. 
+This is because == operator compares memory locations, 
+while equals() method compares the content stored in two objects.

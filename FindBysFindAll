@@ -1,0 +1,24 @@
+@FindAll can contain multiple @FindBy and will return all the elements which matches any @FindBy in a single list.
+
+Example:
+
+@FindAll({
+@FindBy(id = "one"),
+@FindBy(id = "two")
+})
+public List<WebElement> allElementsInList;
+
+Whereas,
+
+@FindBys will return the elements depending upon how @FindBy specified inside it.
+
+@FindBys({
+    @FindBy(id = "one"),
+    @FindBy(className = "two")
+    })
+    public List<WebElement> allElementsInList;
+    
+Where allElementsInList contains all the elements having className="two" inside id="one"
+    
+NOTE : to put it in simple words, @FindBys have AND conditional 
+relationship among the @FindBy whereas @FindAll has OR conditional relationship.
