@@ -1,6 +1,78 @@
 package InterviewQuestionAnswer;
 
 public class ReplaceinStringAndAddStringValueInStrings {
+public static void replaceSpecificWordsInStrings() {
+    try {
+        String str = "you and me not going to do this work. Please You stop everything whatever you have right now."
+                + " you do not have to worry for future things. I will take care of everything. "
+                + "you just sit release and let me handle the things you";
+
+        String[] words = str.split(" "); // Split string into words
+        String result = ""; // Final result string
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equalsIgnoreCase("you")) {
+                result += "chalbe"; // Replace "you" with "chalbe"
+            } else {
+                result += words[i]; // Keep other words unchanged
+            }
+            if (i < words.length - 1) { // Add space after each word, except the last
+                result += " ";
+            }
+        }
+
+        System.out.println(result);
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+	public static void sperateDataType() {
+    try {
+        String str = "DakeVKGm14nDBH8493maaerf";
+        char[] upperCase = new char[str.length()];
+        char[] lowerCase = new char[str.length()];
+        char[] digits = new char[str.length()];
+        
+        char[] c = str.toCharArray();
+        int upperIndex = 0, lowerIndex = 0, digitIndex = 0;
+
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] >= 'A' && c[i] <= 'Z') {
+                upperCase[upperIndex++] = c[i];
+            } else if (c[i] >= 'a' && c[i] <= 'z') {
+                lowerCase[lowerIndex++] = c[i];
+            } else if (c[i] >= '0' && c[i] <= '9') {
+                digits[digitIndex++] = c[i];
+            }
+        }
+
+        // Print uppercase letters
+        System.out.print("Uppercase Letters: ");
+        for (int i = 0; i < upperIndex; i++) {
+            System.out.print(upperCase[i]);
+        }
+        System.out.println();
+
+        // Print lowercase letters
+        System.out.print("Lowercase Letters: ");
+        for (int i = 0; i < lowerIndex; i++) {
+            System.out.print(lowerCase[i]);
+        }
+        System.out.println();
+
+        // Print digits
+        System.out.print("Digits: ");
+        for (int i = 0; i < digitIndex; i++) {
+            System.out.print(digits[i]);
+        }
+        System.out.println();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 
 	public static void repleaceSpecificWordsInStrings() {
 		try {
