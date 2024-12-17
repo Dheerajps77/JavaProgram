@@ -6,7 +6,7 @@ import java.util.Map;
 public class MergeTwoSortArrays {
 
 	public static void main(String[] args) {
-		findMaximumNumberInMap();
+		pairCommonElement();
 	}
 
 	public static void findMaximumNumberInMap() {

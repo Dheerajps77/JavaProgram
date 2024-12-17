@@ -61,7 +61,7 @@ public class ConvertMapsIntoList {
 	}
 	
 	
-	public static void convertMapToListAndPerformIndexBaseOperation() {
+	public static void sortMapOnBasisOfKey() {
 		Map<Integer, String> map = new HashMap<Integer, String>();
 		try {
 
@@ -112,8 +112,9 @@ public class ConvertMapsIntoList {
 	public static void convertMapToList() {
 		Map<Integer, String> map = new HashMap<Integer, String>();
 		try {
-
-			map.put(34, "QA");
+			map.put(361, "ZANFJF");
+			map.put(377, "AAMGFKDK");
+			map.put(346, "QA");
 			map.put(12, "Senior Consultant");
 			map.put(42, "QA Manager");
 			map.put(52, "QA Lead");
