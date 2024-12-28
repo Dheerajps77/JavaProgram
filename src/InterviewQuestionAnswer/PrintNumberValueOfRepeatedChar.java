@@ -39,7 +39,7 @@ public class PrintNumberValueOfRepeatedChar {
 					repeatedCount = value + charValue;
 				}
 			}
-
+ 
 			if (repeatedCount > 0 && newCharrArray != '\0') {
 				for (int j = 0; j < repeatedCount; j++) {
 					System.out.print(newCharrArray);

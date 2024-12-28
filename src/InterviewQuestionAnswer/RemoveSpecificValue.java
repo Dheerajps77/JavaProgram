@@ -12,19 +12,18 @@ public class RemoveSpecificValue {
 	public static void removeDuplicayInArrayUsingSet() {
 		try {
 
-			int[] arr = { 1, 2, 3, 2, 1, 4, 5 };
+			int[] arr = { 100, 5, 1, 2, 3, 2, 1, 4, 5 };
 			Set<Integer> sets = new HashSet<Integer>();
-			int[] newArr=new int[arr.length];
-			int temp=0;
+			int[] newArr = new int[arr.length];
+			int temp = 0;
 			for (int i = 0; i < arr.length; i++) {
 				if (sets.add(arr[i]) != false) {
-					newArr[temp++]=arr[i];
+					newArr[temp++] = arr[i];
 				}
 			}
-			
-			for(int j=0;j<temp;j++)
-			{
-				System.out.print(newArr[j]);
+
+			for (int j = 0; j < temp; j++) {
+				System.out.print(newArr[j]); // 12345
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -46,7 +45,7 @@ public class RemoveSpecificValue {
 			}
 
 			for (int k = 0; k < temp; k++) {
-				System.out.print(newArr[k]);
+				System.out.print(newArr[k]); // 123214
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -90,7 +89,11 @@ public class RemoveSpecificValue {
 
 			for (int j = 0; j < temp; j++) {
 				System.out.print(numArr[j]);
+				
+				
 			}
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

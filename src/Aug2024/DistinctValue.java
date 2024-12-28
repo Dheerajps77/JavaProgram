@@ -23,8 +23,8 @@ public class DistinctValue {
 			}
 
 			for (Map.Entry<Double, Integer> entry : maps.entrySet()) {
-	            System.out.println(entry.getKey() + " : " + entry.getValue());
-	        }
+				System.out.println(entry.getKey() + " : " + entry.getValue());
+			}
 
 		} catch (Exception e) {
 			throw e;
@@ -46,8 +46,8 @@ public class DistinctValue {
 			}
 
 			for (Map.Entry<Float, Integer> entry : maps.entrySet()) {
-	            System.out.println(entry.getKey() + " : " + entry.getValue());
-	        }
+				System.out.println(entry.getKey() + " : " + entry.getValue());
+			}
 
 		} catch (Exception e) {
 			throw e;
@@ -144,7 +144,79 @@ public class DistinctValue {
 		}
 	}
 
-	public static void main(String[] args) {
-		distinctfloat();
+	
+	public static void printOnlyChar()
+	{
+		try {
+			String str="Co2*&*&(()()ngnizen3843t";
+			
+			char[] charArr=str.toCharArray();
+			for(int i=0;i<charArr.length;i++)
+			{
+				if((charArr[i]>='a' && charArr[i]<='z')
+						||(charArr[i]>='A' && charArr[i]<='Z'))
+				{
+					System.out.print(charArr[i]);
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+	
+	public static void StringAnagram() {
+		try {
+			String a = "silent";
+			String b = "entsil";
+			
+			String str="cts";
+			String str3=new String("cts");
+			
+			System.out.println(str==str3);
+			System.out.println(str.equalsIgnoreCase(str3));
+			
+			char aChar[] = a.toCharArray();
+			char bChar[] = b.toCharArray();
+			char temp = ' ', temp1 = ' ';
+			for (int i = 0; i < aChar.length; i++) {
+				for (int j = i + 1; j < aChar.length; j++) {
+					if (aChar[i] > aChar[j]) {
+						temp = aChar[i];
+						aChar[i] = aChar[j];
+						aChar[j] = temp;
+					}
+				}
+			}
+
+			for (int k = 0; k < bChar.length; k++) {
+				for (int g = k + 1; g < bChar.length; g++) {
+					if (bChar[k] > bChar[g]) {
+						temp1 = bChar[k];
+						bChar[k] = bChar[g];
+						bChar[g] = temp1;
+					}
+				}
+			}
+			
+			String str1=new String(aChar);
+			String str2=new String(bChar);
+			
+			if(str1.equalsIgnoreCase(str2))
+			{
+				System.out.println("String is anagram");
+			}
+			else
+			{
+				System.out.println("String is not anagram");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		printOnlyChar();
+	}
+
 }

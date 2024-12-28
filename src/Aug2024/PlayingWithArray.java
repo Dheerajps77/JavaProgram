@@ -4,40 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayingWithArray {
-	
+
 	public static void printOnlyZeroValuesInArrayUsingList() {
-	    try {
-	        int n[] = { -98, 343, 23, 8, 6, 1, 67, 0, 45, 3, 656, 0, 7, 8654, 0, 54, 64, 323, -5, -2, -32, -567 };
+		try {
+			int n[] = { -98, 343, 23, 8, 6, 1, 67, 0, 45, 3, 656, 0, 7, 8654, 0, 54, 64, 323, -5, -2, -32, -567 };
 
-	        // We use three different lists to store zero, positive, and negative values
-	        List<Integer> zeros = new ArrayList<>();
-	        List<Integer> positives = new ArrayList<>();
-	        List<Integer> negatives = new ArrayList<>();
+			// We use three different lists to store zero, positive, and negative values
+			List<Integer> zeros = new ArrayList<>();
+			List<Integer> positives = new ArrayList<>();
+			List<Integer> negatives = new ArrayList<>();
 
-	        // Pass through the array to categorize each number
-	        for (int i = 0; i < n.length; i++) {
-	            if (n[i] == 0) {
-	                zeros.add(n[i]);
-	            } else if (n[i] > 0) {
-	                positives.add(n[i]);
-	            } else {
-	                negatives.add(n[i]);
-	            }
-	        }
+			// Pass through the array to categorize each number
+			for (int i = 0; i < n.length; i++) {
+				if (n[i] == 0) {
+					zeros.add(n[i]);
+				} else if (n[i] > 0) {
+					positives.add(n[i]);
+				} else {
+					negatives.add(n[i]);
+				}
+			}
 
-	        // Print zeros, followed by positives and negatives
-	        for (int zero : zeros) {
-	            System.out.print(zero + " ");
-	        }
-	        for (int positive : positives) {
-	            System.out.print(positive + " ");
-	        }
-	        for (int negative : negatives) {
-	            System.out.print(negative + " ");
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
+			// Print zeros, followed by positives and negatives
+			for (int zero : zeros) {
+				System.out.print(zero + " ");
+			}
+			for (int positive : positives) {
+				System.out.print(positive + " ");
+			}
+			for (int negative : negatives) {
+				System.out.print(negative + " ");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void printOnlyZeroValuesInArray() {
@@ -49,13 +49,13 @@ public class PlayingWithArray {
 					n[temp++] = n[i];
 				}
 			}
-			
+
 			for (int i = 0; i < n.length; i++) {
 				if (n[i] > 0) {
 					n[temp++] = n[i];
 				}
 			}
-			
+
 			for (int i = 0; i < n.length; i++) {
 				if (n[i] < 0) {
 					n[temp++] = n[i];
@@ -138,7 +138,8 @@ public class PlayingWithArray {
 
 	public static void main(String[] args) {
 		printOnlyZeroValuesInArray();
-		//printOnlyPositiveValuesInArray(); // 343 23 8 6 1 67 45 3 656 7 8654 54 64 323
+		// printOnlyPositiveValuesInArray(); // 343 23 8 6 1 67 45 3 656 7 8654 54 64
+		// 323
 		// MixedArrayDemo();
 		// printOnlyNegativeValuesInArray(); // -98 -5 -2 -32 -567
 		// printOnlyZeroValuesInArray(); // 0 0 0

@@ -7,6 +7,14 @@ import java.util.Set;
 
 public class RemoveElementFromArray {
 
+	public static void main(String[] args) {
+		// removeNegativeNumberUsingArrays();
+		// removeSingleValueFromArray(-98);
+		// shiftNegativeValueAtLeft();
+		//removeDuplicatesFromSortedArrayUsingDifferentApproach2();
+		removeElement();
+	}
+	
 	public static void removeDuplicatesFromSortedArrayUsingDifferentApproach2() {
 		try {
 
@@ -244,13 +252,6 @@ public class RemoveElementFromArray {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	public static void main(String[] args) {
-		// removeNegativeNumberUsingArrays();
-		// removeSingleValueFromArray(-98);
-		// shiftNegativeValueAtLeft();
-		shiftZeroValueAtLeft();
 	}
 
 }
