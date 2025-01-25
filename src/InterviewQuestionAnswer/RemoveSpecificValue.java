@@ -6,7 +6,7 @@ import java.util.Set;
 public class RemoveSpecificValue {
 
 	public static void main(String[] args) {
-		removeDuplicayInArrayUsingSet();
+		removeDuplicayInArray();
 	}
 
 	public static void removeDuplicayInArrayUsingSet() {
@@ -33,19 +33,30 @@ public class RemoveSpecificValue {
 	public static void removeDuplicayInArray() {
 		try {
 
-			int[] arr = { 1, 2, 3, 2, 1, 4, 5 };
+			int[] arr = { 1, 2, 3, 2, 1, 7, 910, 8, 9, 4, 5, 4, 2, 1, 5, 5, 6, 7, 10 };
 
 			int[] newArr = new int[arr.length];
-			int temp = 0;
+			int temp = 0, temp1 = 0;
+
+			for (int j = 0; j < arr.length; j++) {
+
+				for (int g = j + 1; g < arr.length - 1; g++) {
+					if (arr[j] > arr[g]) {
+						temp1 = arr[j];
+						arr[j] = arr[g];
+						arr[g] = temp1;
+					}
+				}
+			}
 
 			for (int i = 0; i < arr.length - 1; i++) {
-				if (arr[i] != arr[i + 1]) {
+				if (i == 0 || arr[i] != arr[i - 1]) {
 					newArr[temp++] = arr[i];
 				}
 			}
 
 			for (int k = 0; k < temp; k++) {
-				System.out.print(newArr[k]); // 123214
+				System.out.print(newArr[k] + " "); // 1 2 3 4 5 6 7 8 9 910
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -89,11 +100,8 @@ public class RemoveSpecificValue {
 
 			for (int j = 0; j < temp; j++) {
 				System.out.print(numArr[j]);
-				
-				
+
 			}
-			
-			
 
 		} catch (Exception e) {
 			e.printStackTrace();
