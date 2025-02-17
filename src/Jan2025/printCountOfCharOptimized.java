@@ -36,6 +36,44 @@ public class printCountOfCharOptimized {
 	    }
 	}
 
+	public static void printCountOfCharOptimizedUsingCollection() {
+	        try {
+	            String src = "f4m3b5i2l9b1";  // Example with large input
+	            char[] charArray = src.toCharArray();
+
+	            int repeatedCount = 0;
+	            char newChar = '\0';
+	            List<Character> outputList = new ArrayList<>(); // Store final result
+
+	            for (char ch : charArray) {
+	                if (Character.isLetter(ch)) { 
+	                    if (repeatedCount > 0 && newChar != '\0') {
+	                        outputList.addAll(Collections.nCopies(repeatedCount, newChar));
+	                        outputList.add('\n'); // Newline after sequence
+	                        repeatedCount = 0;
+	                    }
+	                    newChar = ch; // Store the current character
+	                } else if (Character.isDigit(ch)) {
+	                    repeatedCount = repeatedCount * 10 + (ch - '0'); // Handle multi-digit numbers
+	                }
+	            }
+
+	            // Append last character sequence if needed
+	            if (repeatedCount > 0 && newChar != '\0') {
+	                outputList.addAll(Collections.nCopies(repeatedCount, newChar));
+	                outputList.add('\n'); 
+	            }
+
+	            // Print final output efficiently
+	            for (char c : outputList) {
+	                System.out.print(c);
+	            }
+
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }
+
 	
 	public static void main(String[] args) {
 		
