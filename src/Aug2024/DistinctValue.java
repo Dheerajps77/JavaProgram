@@ -8,17 +8,50 @@ import java.util.Set;
 
 public class DistinctValue {
 
+	public static void explaingetOrDefault()
+	{						
+		try {
+	
+			Map<Integer, Integer> maps = new HashMap<>();
+			int n = 5;
+
+			// Case 1: If '5' is not in the map
+			System.out.println(maps.getOrDefault(5, 0)); // Output: 0 (default value)
+
+			// Adding '5' to the map
+			maps.put(5, 2);
+
+			// Case 2: If '5' is already in the map
+			System.out.println(maps.getOrDefault(5, 0)); // Output: 2
+			
+			
+			// First occurrence of 5
+			maps.put(n, maps.getOrDefault(n, 0) + 1);
+			System.out.println(maps.get(n)); // Output: 1
+
+			// Second occurrence of 5
+			maps.put(n, maps.getOrDefault(n, 0) + 1);
+			System.out.println(maps.get(n)); // Output: 2
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void distinctInteger() {
+		
+		/*
+		maps.getOrDefault(n, 0) tries to fetch the current count of n from the map.
+		If n is already present, it returns its current count.
+		If n is not present, it returns the default value (0).
+		*/
+		
         try {
             int num[] = {34, 53, 34, 56, 65, 54, 2, 3, 2, 3, 4, 4, 5, 5, 76, 76, 76, 80, 80, 89, 80};
             Map<Integer, Integer> maps = new HashMap<>();
 
             for (int n : num) {
-                if (maps.get(n) != null) {
-                    maps.put(n, maps.get(n) + 1);
-                } else {
-                    maps.put(n, 1);
-                }
+                maps.put(n, maps.getOrDefault(n, 0) + 1);
             }
 
             for (Entry<Integer, Integer> entry : maps.entrySet()) {
