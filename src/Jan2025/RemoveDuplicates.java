@@ -6,6 +6,81 @@ public class RemoveDuplicates {
 		removeDuplicateIntegers();
 	}
 
+	public static void printUnqiueValueUsingLoop1() {
+		String str = "Geeksforgeekszyx";
+		char[] charArr = str.toLowerCase().toCharArray();
+		int length = charArr.length;
+
+		char[] nonDupValue = new char[length];
+		int temp = 0;
+
+		for (int i = 0; i < length; i++) {
+			boolean isRepeated = false;
+
+			for (int j = 0; j < length; j++) {
+				if (i != j && charArr[i] == charArr[j]) {
+					isRepeated = true; // Mark as repeated
+					break;
+				}
+			}
+
+			if (!isRepeated) {
+				nonDupValue[temp++] = charArr[i]; // Store only unique characters
+			}
+		}
+
+		// Print only valid unique characters
+		for (int k = 0; k < temp; k++) {
+			System.out.print(nonDupValue[k]);
+		}
+	}
+
+	public static void nonRepeatedValue() {
+		String str = "Geeksforgeeks";
+		char[] charArr = str.toLowerCase().toCharArray();
+		int temp = 0;
+		char[] newCharr = new char[charArr.length];
+		for (int i = 0; i < charArr.length; i++) {
+			boolean flag = false;
+			for (int j = 0; j < temp; j++) {
+				if (charArr[i] == charArr[j]) {
+					flag = true;
+					break;
+				}
+			}
+
+			if (!flag) {
+				newCharr[temp++] = charArr[i];
+			}
+		}
+
+		for (int g = 0; g < temp; g++) {
+			System.out.print(newCharr[g]);
+		}
+
+	}
+
+	public static void printUnqiueValue() {
+		try {
+			String str = "Geeksforgeeks";
+			char[] charArr = str.toLowerCase().toCharArray();
+
+			HashMap<Character, Integer> maps = new HashMap<Character, Integer>();
+
+			for (int i = 0; i < charArr.length; i++) {
+				maps.put(charArr[i], maps.getOrDefault(maps, 0) + 1);
+			}
+
+			for (Map.Entry<Character, Integer> values : maps.entrySet()) {
+
+				System.out.println(values.getKey() + " " + values.getValue());
+			}
+
+		} catch (Exception e) {
+			throw e;
+		}
+	}
+
 	public static void removeDuplicateIntegers() {
 		try {
 
