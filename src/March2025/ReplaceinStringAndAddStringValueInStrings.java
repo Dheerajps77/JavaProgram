@@ -1,4 +1,4 @@
-package March25_InterviewQuestionsAnswer;
+package March2025;
 
 public class ReplaceinStringAndAddStringValueInStrings {
 
@@ -18,7 +18,6 @@ public class ReplaceinStringAndAddStringValueInStrings {
 			for (int i = 0; i < n.length; i++) {
 				if (n[i] == numToReplace) {
 					n1[temp++] = numToAdd;
-					;
 				} else {
 					n1[temp++] = n[i];
 				}
