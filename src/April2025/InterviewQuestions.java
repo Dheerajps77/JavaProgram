@@ -11,69 +11,69 @@ import java.util.TreeMap;
 public class InterviewQuestions {
 
 	public static void main(String[] args) {
-		//ConsonantCount();
-		
-		 generateWord(3, 2, 0); // Example 1
-	        generateWord(4, 1, 2); // Example 2
+		ConsonantCount();
+
+		generateWord(3, 2, 0); // Example 1
+		generateWord(4, 1, 2); // Example 2
 	}
-	
+
 	public static void generateWord(int aCount, int bCount, int cCount) {
-	    try {
-	        char lastChar1 = '\0', lastChar2 = '\0';
+		try {
+			char lastChar1 = '\0', lastChar2 = '\0';
 
-	        while (aCount > 0 || bCount > 0 || cCount > 0) {
-	            boolean picked = false;
+			while (aCount > 0 || bCount > 0 || cCount > 0) {
+				boolean picked = false;
 
-	            if (aCount >= bCount && aCount >= cCount && !(lastChar1 == 'a' && lastChar2 == 'a')) {
-	                System.out.print('a');
-	                lastChar2 = lastChar1;
-	                lastChar1 = 'a';
-	                aCount--;
-	                picked = true;
-	            } else if (bCount >= aCount && bCount >= cCount && !(lastChar1 == 'b' && lastChar2 == 'b')) {
-	                System.out.print('b');
-	                lastChar2 = lastChar1;
-	                lastChar1 = 'b';
-	                bCount--;
-	                picked = true;
-	            } else if (cCount >= aCount && cCount >= bCount && !(lastChar1 == 'c' && lastChar2 == 'c')) {
-	                System.out.print('c');
-	                lastChar2 = lastChar1;
-	                lastChar1 = 'c';
-	                cCount--;
-	                picked = true;
-	            }
+				if (aCount >= bCount && aCount >= cCount && !(lastChar1 == 'a' && lastChar2 == 'a')) {
+					System.out.print('a');
+					lastChar2 = lastChar1;
+					lastChar1 = 'a';
+					aCount--;
+					picked = true;
+				} else if (bCount >= aCount && bCount >= cCount && !(lastChar1 == 'b' && lastChar2 == 'b')) {
+					System.out.print('b');
+					lastChar2 = lastChar1;
+					lastChar1 = 'b';
+					bCount--;
+					picked = true;
+				} else if (cCount >= aCount && cCount >= bCount && !(lastChar1 == 'c' && lastChar2 == 'c')) {
+					System.out.print('c');
+					lastChar2 = lastChar1;
+					lastChar1 = 'c';
+					cCount--;
+					picked = true;
+				}
 
-	            if (!picked) {
-	                // If we can't pick according to highest count, try to pick any available which is different
-	                if (aCount > 0 && !(lastChar1 == 'a' && lastChar2 == 'a')) {
-	                    System.out.print('a');
-	                    lastChar2 = lastChar1;
-	                    lastChar1 = 'a';
-	                    aCount--;
-	                } else if (bCount > 0 && !(lastChar1 == 'b' && lastChar2 == 'b')) {
-	                    System.out.print('b');
-	                    lastChar2 = lastChar1;
-	                    lastChar1 = 'b';
-	                    bCount--;
-	                } else if (cCount > 0 && !(lastChar1 == 'c' && lastChar2 == 'c')) {
-	                    System.out.print('c');
-	                    lastChar2 = lastChar1;
-	                    lastChar1 = 'c';
-	                    cCount--;
-	                } else {
-	                    // If even that is not possible, then break
-	                    break;
-	                }
-	            }
-	        }
+				if (!picked) {
+					// If we can't pick according to highest count, try to pick any available which
+					// is different
+					if (aCount > 0 && !(lastChar1 == 'a' && lastChar2 == 'a')) {
+						System.out.print('a');
+						lastChar2 = lastChar1;
+						lastChar1 = 'a';
+						aCount--;
+					} else if (bCount > 0 && !(lastChar1 == 'b' && lastChar2 == 'b')) {
+						System.out.print('b');
+						lastChar2 = lastChar1;
+						lastChar1 = 'b';
+						bCount--;
+					} else if (cCount > 0 && !(lastChar1 == 'c' && lastChar2 == 'c')) {
+						System.out.print('c');
+						lastChar2 = lastChar1;
+						lastChar1 = 'c';
+						cCount--;
+					} else {
+						// If even that is not possible, then break
+						break;
+					}
+				}
+			}
 
-	        System.out.println();
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
+			System.out.println();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-
 
 	public static void ConsonantCount() {
 		try {
@@ -82,7 +82,7 @@ public class InterviewQuestions {
 			input = input.toLowerCase();
 
 			for (char c : input.toCharArray()) {
-				if (c >= 'a' && c <= 'z' && !"aeiou".contains(c + "")) {
+				if (c >= 'a' && c <= 'z' && !"aeiou".contains(c+"")) {
 					count++;
 				}
 			}
@@ -91,30 +91,26 @@ public class InterviewQuestions {
 			e.printStackTrace();
 		}
 	}
-	public static void sumToFindDigonals()
-	{
+
+	public static void sumToFindDigonals() {
 		try {
-			int[][] matrix = {
-		            {1,2,3},
-		            {4,5,6},
-		            {7,8,9}
-		        };
+			int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-				int n = matrix.length;
-				int primary = 0, secondary = 0;
+			int n = matrix.length;
+			int primary = 0, secondary = 0;
 
-				for (int i = 0; i < n; i++) {
-					primary = primary + matrix[i][i];
-					secondary = secondary + matrix[i][n - i - 1];
-				}
-
-				System.out.println("Primary Diagonal Sum: " + primary);
-				System.out.println("Secondary Diagonal Sum: " + secondary);
-
-			} catch (Exception e) {
-				e.printStackTrace();
+			for (int i = 0; i < n; i++) {
+				primary = primary + matrix[i][i];
+				secondary = secondary + matrix[i][n - i - 1];
 			}
+
+			System.out.println("Primary Diagonal Sum: " + primary);
+			System.out.println("Secondary Diagonal Sum: " + secondary);
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+	}
 
 	public static void removeValueWhileReadingInMap() {
 		try {

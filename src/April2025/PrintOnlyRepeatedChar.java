@@ -18,10 +18,12 @@ public class PrintOnlyRepeatedChar {
 				maps.put(charValue, 1);
 			}
 		}
-
-		for (Map.Entry<Character, Integer> values : maps.entrySet()) {
-			//System.out.println(values.getKey() + ", " + values.getValue());
-		}
+		
+		// Only care about the target character
+	    //int count = maps.getOrDefault(Character.toLowerCase(charToBeRemoved), 0);
+		//if (count > 1) {
+//	        builder.append(charToBeRemoved).append(",").append(count);
+	    //}
 		
 		for(Map.Entry<Character, Integer> values : maps.entrySet())
 		{
