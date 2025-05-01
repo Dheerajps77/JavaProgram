@@ -1,0 +1,173 @@
+Detailed Explanation:
+1. Primitive Data Types : In Java, primitive data types represent the simplest forms of data. 
+   They are not objects and are predefined by the Java language. 
+   Primitive data types are efficient because they directly store values in memory.
+
+Java Primitive Data Types:
+byte: 1 byte, ranges from -128 to 127.
+short: 2 bytes, ranges from -32,768 to 32,767.
+int: 4 bytes, ranges from -2^31 to 2^31 - 1.
+long: 8 bytes, ranges from -2^63 to 2^63 - 1.
+float: 4 bytes, for decimal values (up to 7 digits precision).
+double: 8 bytes, for decimal values (up to 15 digits precision).
+char: 2 bytes, for storing single Unicode characters.
+boolean: 1 bit, can only hold true or false.
+
+Examples:
+int x = 10; // Primitive type
+   char letter = 'A'; // Primitive type
+   boolean isActive = true; // Primitive type
+   2. Non-Primitive Data Types (Reference Data Types)
+   Non-primitive data types are also known as reference types. 
+   They refer to objects, arrays, or classes. Non-primitive data types can hold references 
+   (memory addresses) to actual data.
+
+   Examples of Non-Primitive Data Types=
+   
+   String:A class that represents a sequence of characters.
+
+Arrays: Arrays store multiple values of the same type.
+
+Objects: Instances of classes.
+
+Examples:
+java
+Copy
+Edit
+String name = "John"; // Non-primitive type (String)
+int[] numbers = {1, 2, 3}; // Non-primitive type (Array)
+3. Wrapper Classes
+Wrapper classes are part of Java's object-oriented design. 
+Each primitive data type has a corresponding wrapper class that is part of the java.lang package. 
+These wrapper classes are used to convert primitive types into objects (box them) and back to 
+primitive types (unbox them).
+
+Wrapper Classes for Primitive Types:
+byte → Byte
+
+short → Short
+
+int → Integer
+
+long → Long
+
+float → Float
+
+double → Double
+
+char → Character
+
+boolean → Boolean
+
+Why Use Wrapper Classes?
+Nullability: Primitive types can't be null, but wrapper classes can.
+
+Collections: Collections like List, Set, etc., can only store objects, not primitive types. 
+So, you need to use wrapper classes to store primitive types in collections.
+
+Examples of Wrapper Classes:
+java
+Copy
+Edit
+Integer a = Integer.valueOf(10); // Wrapping an int into Integer
+Character c = 'A'; // Wrapping a char into Character
+Boolean b = Boolean.valueOf("true"); // Wrapping a boolean into Boolean
+4. Unwrapping (Unboxing)
+Unwrapping, or unboxing, is the process of converting an object (wrapper class) back to 
+its corresponding primitive type. Java automatically handles unboxing when needed, making it seamless.
+
+Example of Unwrapping:
+java
+Copy
+Edit
+Integer wrappedInt = Integer.valueOf(100); // Wrapping an int
+int primitiveInt = wrappedInt; // Unwrapping to primitive type
+5. Type Casting
+Type casting is the process of converting one data type to another. It can be categorized into two types:
+
+a. Implicit Type Casting (Automatic or Widening)
+This occurs when a smaller data type is converted into a larger data type. 
+Java automatically performs widening without any loss of data. For example, 
+converting an int to a long.
+
+Example:
+java
+Copy
+Edit
+int num = 50;
+long longNum = num; // Automatic conversion from int to long (widening)
+b. Explicit Type Casting (Manual or Narrowing)
+This occurs when a larger data type is converted into a smaller data type. 
+You need to explicitly cast the value using parentheses, and there's a 
+risk of data loss if the larger type can't fit into the smaller type.
+
+Example:
+java
+Copy
+Edit
+double pi = 3.14159;
+int piInt = (int) pi; // Manual conversion from double to int (narrowing)
+System.out.println(piInt); // Output will be 3 (data loss)
+6. Upcasting
+Upcasting refers to converting a subclass object into a superclass object. 
+This is a safe operation because a subclass object is always an instance of 
+its superclass (since it inherits from the superclass).
+
+Upcasting is always safe because every subclass object is an instance of the superclass.
+
+It is done implicitly by the compiler.
+
+Example of Upcasting:
+java
+Copy
+Edit
+class Animal {
+    void makeSound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        Animal animal = dog; // Upcasting: Dog is an Animal
+        animal.makeSound(); // Will print "Bark" due to dynamic polymorphism
+    }
+}
+In this case, dog (an instance of the Dog class) is upcast to Animal. 
+Even though it is referred to as an Animal, it still behaves like a Dog due to dynamic polymorphism.
+
+7. Downcasting (Opposite of Upcasting)
+Downcasting is the process of converting a superclass object back to a subclass object. 
+It is considered risky because not all superclass objects can be safely converted back to 
+subclass objects.
+
+Example of Downcasting:
+java
+Copy
+Edit
+Animal animal = new Dog(); // Upcasting: Dog to Animal
+Dog dog = (Dog) animal; // Downcasting: Animal to Dog (explicit casting)
+
+dog.makeSound(); // Will print "Bark"
+If you try to downcast an object to a subclass it doesn't belong to, 
+it will result in a ClassCastException.
+
+Summary
+Primitive types are basic data types and do not require any additional memory overhead.
+Non-primitive types (like String, arrays, and objects) are reference types, storing memory addresses to actual data.
+Wrapper classes allow you to treat primitives as objects and are necessary 
+when working with collections that can only store objects.
+
+Unboxing is the reverse process of converting wrapper objects to primitive types.
+Type casting allows you to convert between different data types, with implicit casting 
+(widening) being safe and explicit casting (narrowing) potentially leading to data loss.
+
+Upcasting is safe and happens automatically, 
+while downcasting requires explicit casting and can lead to exceptions if done improperly.

@@ -7,47 +7,66 @@ public class FindOddDuplicateAndUniqueInHashHmap {
 
 	// Duplicates for int array
 	public static void findDuplicatesInIntegers(int[] array) {
+		
+		System.out.print("Original Array : ");
+		for(int arr : array)
+		{
+			System.out.print(arr + " ");
+		}		
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int num : array) {
 			map.put(num, map.getOrDefault(num, 0) + 1);
 		}
 
-		System.out.println("\nDuplicate Integers:");
+		System.out.print("\nDuplicate Integers: ");
 		for (int key : map.keySet()) {
 			if (map.get(key) > 1) {
 				System.out.print(key + " ");
 			}
 		}
+		System.out.println();
 	}
 
 	// Unique for int array
 	public static void findUniquesInIntegers(int[] array) {
+		System.out.print("Unique Array : ");
+		for(int arr : array)
+		{
+			System.out.print(arr + " ");
+		}		
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int num : array) {
 			map.put(num, map.getOrDefault(num, 0) + 1);
 		}
 
-		System.out.println("\nUnique Integers:");
+		System.out.print("\nUnique Integers: ");
 		for (int key : map.keySet()) {
 			if (map.get(key) == 1) {
 				System.out.print(key + " ");
 			}
 		}
+		System.out.println();
 	}
 
 	// Odd One for int array
 	public static void findOddOneInIntegers(int[] array) {
+		System.out.print("Odd Array : ");
+		for(int arr : array)
+		{
+			System.out.print(arr + " ");
+		}		
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int num : array) {
 			map.put(num, map.getOrDefault(num, 0) + 1);
 		}
 
-		System.out.println("\nOdd-One Integers:");
+		System.out.print("\nOdd Integers: ");
 		for (int key : map.keySet()) {
 			if (map.get(key) % 2 != 0) {
 				System.out.print(key + " ");
 			}
 		}
+		System.out.println();
 	}
 
 	// Similar methods for String arrays
