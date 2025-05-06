@@ -17,23 +17,20 @@ Examples:
 int x = 10; // Primitive type
    char letter = 'A'; // Primitive type
    boolean isActive = true; // Primitive type
-   2. Non-Primitive Data Types (Reference Data Types)
+   
+2. Non-Primitive Data Types (Reference Data Types)
    Non-primitive data types are also known as reference types. 
    They refer to objects, arrays, or classes. Non-primitive data types can hold references 
    (memory addresses) to actual data.
 
    Examples of Non-Primitive Data Types=
    
-   String:A class that represents a sequence of characters.
-
+String:A class that represents a sequence of characters.
 Arrays: Arrays store multiple values of the same type.
-
 Objects: Instances of classes.
 
 Examples:
-java
-Copy
-Edit
+
 String name = "John"; // Non-primitive type (String)
 int[] numbers = {1, 2, 3}; // Non-primitive type (Array)
 3. Wrapper Classes
@@ -44,19 +41,12 @@ primitive types (unbox them).
 
 Wrapper Classes for Primitive Types:
 byte → Byte
-
 short → Short
-
 int → Integer
-
 long → Long
-
 float → Float
-
 double → Double
-
 char → Character
-
 boolean → Boolean
 
 Why Use Wrapper Classes?
@@ -66,9 +56,6 @@ Collections: Collections like List, Set, etc., can only store objects, not primi
 So, you need to use wrapper classes to store primitive types in collections.
 
 Examples of Wrapper Classes:
-java
-Copy
-Edit
 Integer a = Integer.valueOf(10); // Wrapping an int into Integer
 Character c = 'A'; // Wrapping a char into Character
 Boolean b = Boolean.valueOf("true"); // Wrapping a boolean into Boolean
@@ -77,9 +64,6 @@ Unwrapping, or unboxing, is the process of converting an object (wrapper class) 
 its corresponding primitive type. Java automatically handles unboxing when needed, making it seamless.
 
 Example of Unwrapping:
-java
-Copy
-Edit
 Integer wrappedInt = Integer.valueOf(100); // Wrapping an int
 int primitiveInt = wrappedInt; // Unwrapping to primitive type
 5. Type Casting
@@ -91,9 +75,6 @@ Java automatically performs widening without any loss of data. For example,
 converting an int to a long.
 
 Example:
-java
-Copy
-Edit
 int num = 50;
 long longNum = num; // Automatic conversion from int to long (widening)
 b. Explicit Type Casting (Manual or Narrowing)
@@ -102,9 +83,6 @@ You need to explicitly cast the value using parentheses, and there's a
 risk of data loss if the larger type can't fit into the smaller type.
 
 Example:
-java
-Copy
-Edit
 double pi = 3.14159;
 int piInt = (int) pi; // Manual conversion from double to int (narrowing)
 System.out.println(piInt); // Output will be 3 (data loss)
@@ -118,9 +96,6 @@ Upcasting is always safe because every subclass object is an instance of the sup
 It is done implicitly by the compiler.
 
 Example of Upcasting:
-java
-Copy
-Edit
 class Animal {
     void makeSound() {
         System.out.println("Animal sound");
@@ -149,9 +124,6 @@ It is considered risky because not all superclass objects can be safely converte
 subclass objects.
 
 Example of Downcasting:
-java
-Copy
-Edit
 Animal animal = new Dog(); // Upcasting: Dog to Animal
 Dog dog = (Dog) animal; // Downcasting: Animal to Dog (explicit casting)
 

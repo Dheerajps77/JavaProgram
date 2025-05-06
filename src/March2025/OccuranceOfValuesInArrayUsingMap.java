@@ -6,8 +6,8 @@ import java.util.Map;
 public class OccuranceOfValuesInArrayUsingMap {
 
 	public static void main(String[] args) {
-		// findMaxOccuranceOfEachCharInString();
-		findMinOccuranceOfEachCharInString();
+		 findMaxOccuranceOfEachCharInString();
+		// findMinOccuranceOfEachCharInString();
 	}
 
 	public static void findMaxOccuranceOfEachCharInString() {
