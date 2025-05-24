@@ -76,6 +76,9 @@ public class MakeCasesInStringArray {
 			for (int j = 0; j < charArray.length; j++) {
 				System.out.print(charArray[j] + " ");
 			}
+			
+			String str=new String(charArray);
+			System.out.println(str);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

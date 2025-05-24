@@ -115,7 +115,6 @@ public class PrintCharBasisOnCountValue {
 
 	public static void printNumberBasisOnFirstNumber() {
 		try {
-
 			int[] arr = { 12, 1, 134, 75, 167, 123, 11, 64, 190, 90, 2543, 3567, 22, 245, 235 };
 			char valueChar = '1';
 			for (int i = 0; i < arr.length; i++) {

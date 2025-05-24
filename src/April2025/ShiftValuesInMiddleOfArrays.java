@@ -3,7 +3,7 @@ package April2025;
 public class ShiftValuesInMiddleOfArrays {
 
 	public static void main(String[] args) {
-		shiftZerosToMiddleUsingAnotherWay();
+		shiftNegativesToMiddle();
 	}
 
 	public static void shiftZerosToMiddle() {
@@ -96,14 +96,14 @@ public class ShiftValuesInMiddleOfArrays {
 
 	    // Fill negatives in middle
 	    for (int i = 0; i < arr.length; i++) {
-	        if (arr[i] < 0 && left <= right) {
+	        if (arr[i] < 0 && left <= right) { 
 	            result[left++] = arr[i];
 	        }
 	    }
 
 	    System.out.print("Negatives shifted to middle: ");
 	    for (int val : result) {
-	        System.out.print(val + " ");
+	        System.out.print(val + " "); // 1 3 0 1 3 0 5 7 0
 	    }
 	}
 
