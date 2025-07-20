@@ -5,8 +5,15 @@ import java.util.Map;
 
 public class FindDuplicateElementsUsingMap {
 	
+	// ANSI escape codes for console highlighting
+    public static final String RESET = "\u001B[0m";
+    public static final String GREEN_BOLD = "\u001B[1;32m";
+    public static final String RED_BOLD = "\u001B[1;31m";
+    public static final String YELLOW_BOLD = "\u001B[1;33m";
+    public static final String BLUE_BOLD = "\u001B[1;34m";
+    
 	public static void main(String[] args) {
-		findDuplicateNumberInArray();
+		findDuplicateWordInString();
 	}
 
 	public static void findDuplicateNumberInArray() {
@@ -47,18 +54,20 @@ public class FindDuplicateElementsUsingMap {
 			String newString = "";
 			char[] charArr = str.toCharArray();
 			Map<String, Integer> maps = new HashMap<>();
-
+			StringBuilder builder = new StringBuilder();
+			
 			for (int i = 0; i < charArr.length; i++) {
 				if ((charArr[i] >= 'A' && charArr[i] < 'Z') || (charArr[i] >= 'a' && charArr[i] <= 'z')
 						|| (charArr[i] == ' ')) {
-					newString = newString + charArr[i];
+					newString = newString + charArr[i]; // Can be use StringBuilder instead
+					// 
 				}
 			}
-			System.out.println("Original String below\n" + newString.toLowerCase());
+			System.out.println(BLUE_BOLD + "Original String below : - " + RESET + GREEN_BOLD + newString.toLowerCase() + RESET );
 			String[] splitedString = newString.split(" ");
 
 			for (String forString : splitedString) {
-				if (forString == " ")
+				if (forString.equals(" ")) // or if(forString.trim().isEmpty()) continue ;
 					continue;
 				if (maps.get(forString) != null) {
 					maps.put(forString, maps.get(forString) + 1);
@@ -67,16 +76,59 @@ public class FindDuplicateElementsUsingMap {
 				}
 			}
 
-			System.out.println("Words which occured more than 1 time");
+			System.out.println(YELLOW_BOLD + "Words which occured more than 1 time at below :- " + RESET);
 			for (Map.Entry<String, Integer> values : maps.entrySet()) {
 				if (values.getValue() > 1) {
-					System.out.print(values.getKey() + ", ");
+					System.out.println(values.getKey() + " : " + values.getValue());
 				}
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void findDuplicateWordInStringUsingStringBuilder() {
+	    try {
+	        String str = "Hi, How are you ? you must be straving. So I have done arrangment for you. "
+	                + "You need t come in this way. I will take care you. Please be noted that I am your host "
+	                + "for todays programe. The programe contaning lots of things. You will be amazed after "
+	                + "learning this.";
+
+	        StringBuilder newString = new StringBuilder();
+	        char[] charArr = str.toCharArray();
+	        Map<String, Integer> maps = new HashMap<>();
+
+	        for (int i = 0; i < charArr.length; i++) {
+	            if ((charArr[i] >= 'A' && charArr[i] < 'Z') || (charArr[i] >= 'a' && charArr[i] <= 'z')
+	                    || (charArr[i] == ' ')) {
+	                newString.append(charArr[i]);
+	            }
+	        }
+
+	        System.out.println("Original String below :- " + newString.toString().toLowerCase());
+	        String[] splitedString = newString.toString().toLowerCase().split(" ");
+
+	        for (String forString : splitedString) {
+	            if (forString.equals(" "))
+	                continue;
+	            if (maps.get(forString) != null) {
+	                maps.put(forString, maps.get(forString) + 1);
+	            } else {
+	                maps.put(forString, 1);
+	            }
+	        }
+
+	        System.out.println("Words which occured more than 1 time :-");
+	        for (Map.Entry<String, Integer> values : maps.entrySet()) {
+	            if (values.getValue() > 1) {
+	                System.out.println(values.getKey() + " : " + values.getValue());
+	            }
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	public static void findDuplicateElementInCharacter() {

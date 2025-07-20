@@ -3,7 +3,7 @@ package April2025;
 public class ShiftingInArrays {
 
 	public static void main(String[] args) {
-		shiftZerosToRight();
+		shiftZerosToLeft();
 	}
 
 	public static void shiftZerosToRight() {

@@ -7,6 +7,83 @@ import java.util.Set;
 
 public class Set1 {
 
+	public static void main(String[] args) {
+		fullPyramid();
+
+		//System.out.println(isIsomorphic("egg", "add"));    // true ('e'->'a', 'g'->'d')
+	    //System.out.println(isIsomorphic("foo", "bar"));    // false ('o'→'a' and 'o'→'r' conflict)
+	    //System.out.println(isIsomorphic("paper", "title"));// true ('p'->'t', 'a'->'i'...)
+	    //System.out.println(isIsomorphic("ab", "aa"));      // false (both 'a' and 'b' → 'a')
+	}
+	
+	public static void fullPyramid() {
+	    int n = 5;
+	    for (int i = 1; i <= n; i++) {
+	        for (int j = n; j > i; j--) {
+	            System.out.print(" ");
+	        }
+	        for (int k = 1; k <= (2 * i - 1); k++) {
+	            System.out.print("*");
+	        }
+	        System.out.println();
+	    }
+
+/*
+	*
+   ***
+  *****
+ *******
+*********
+
+*/
+	}
+	
+	public static void right_Aligned_Half_Pyramid() {
+		int n = 10;
+		for (int i = 0; i < n; i++) {
+			for (int j = n; j > i; j--) {
+				System.out.print(" ");
+			}
+			for (int k = 0; k < i; k++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+/*
+         *
+        **
+       ***
+      ****
+     *****
+    ******
+   *******
+  ********
+ *********
+ */
+	}
+	
+	public static void left_Aligned_Half_Pyramid() {
+		int n = 10;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+/*
+ 
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+ */
+	}
+	
 	public static void printLeftAngleTriangleWithNumber() {
 		int n = 10;
 
@@ -18,7 +95,14 @@ public class Set1 {
 		}
 
 		/*
-		 * 1 12 123 1234 12345 123456 1234567 12345678
+		 1 
+		 12 
+		 123 
+		 1234 
+		 12345 
+		 123456 
+		 1234567 
+		 12345678
 		 */
 	}
 
@@ -36,7 +120,14 @@ public class Set1 {
 		}
 
 		/*
-		 * 1 12 123 1234 12345 123456 1234567 12345678
+		 1 
+		 12 
+		 123 
+		 1234 
+		 12345 
+		 123456 
+		 1234567 
+		 12345678
 		 */
 	}
 
@@ -76,14 +167,5 @@ public class Set1 {
 			}
 		}
 		return true;
-	}
-
-	public static void main(String[] args) {
-		// printRightAngleTriangleWithNumber();
-
-		System.out.println(isIsomorphic("egg", "add"));    // true ('e'->'a', 'g'->'d')
-	    System.out.println(isIsomorphic("foo", "bar"));    // false ('o'→'a' and 'o'→'r' conflict)
-	    System.out.println(isIsomorphic("paper", "title"));// true ('p'->'t', 'a'->'i'...)
-	    System.out.println(isIsomorphic("ab", "aa"));      // false (both 'a' and 'b' → 'a')
 	}
 }

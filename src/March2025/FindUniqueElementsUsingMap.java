@@ -6,7 +6,7 @@ import java.util.Map;
 public class FindUniqueElementsUsingMap {
 
 	public static void main(String[] args) {
-		findUniqueNumberInArray();
+		findUniqueWordInString();
 	}
 
 	public static void findUniqueNumberInArray() {
@@ -53,7 +53,7 @@ public class FindUniqueElementsUsingMap {
 					newString = newString + charArr[i];
 				}
 			}
-			System.out.println("Original String below\n" + newString.toLowerCase());
+			System.out.println("Original String below :-" + newString.toLowerCase());
 			String[] splitedString = newString.split(" ");
 
 			for (String forString : splitedString) {

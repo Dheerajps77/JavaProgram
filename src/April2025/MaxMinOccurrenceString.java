@@ -3,33 +3,50 @@ package April2025;
 import java.util.*;
 
 public class MaxMinOccurrenceString {
-    public static void main(String[] args) {
-        String[] words = {"apple", "banana", "apple", "cherry", "banana", "banana"};
+	public static void main(String[] args) {
+		String[] words = { "apple", "banana", "apple", "cherry", "banana", "banana", "cherry", "name" };
 
-        HashMap<String, Integer> map = new HashMap<>();
+		HashMap<String, Integer> map = new HashMap<>();
 
-        for (String word : words) {
-            map.put(word, map.getOrDefault(word, 0) + 1);
-        }
+		for (String word : words) {
 
-        String maxWord = "", minWord = "";
-        int maxFreq = Integer.MIN_VALUE, minFreq = Integer.MAX_VALUE;
+			if (map.get(word) != null) {
+				map.put(word, map.get(word) + 1);
+			} else {
+				map.put(word, 1);
+			}
+		}
 
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            String word = entry.getKey();
-            int freq = entry.getValue();
+		String maxWord = "";
+		String minWord = "";
+		int maxFreq = 0;
+		int minFreq = 0;
+		boolean firstEntry = true; // Flag to handle first iteration
 
-            if (freq > maxFreq) {
-                maxFreq = freq;
-                maxWord = word;
-            }
-            if (freq < minFreq) {
-                minFreq = freq;
-                minWord = word;
-            }
-        }
+		for (Map.Entry<String, Integer> entry : map.entrySet()) {
+			String word = entry.getKey();
+			int freq = entry.getValue();
 
-        System.out.println("String Max Occurrence: " + maxWord + " (count: " + maxFreq + ")");
-        System.out.println("String Min Occurrence: " + minWord + " (count: " + minFreq + ")");
-    }
+			if (firstEntry) {
+				maxFreq = freq;
+				minFreq = freq;
+				maxWord = word;
+				minWord = word;
+				firstEntry = false;
+				continue;
+			}
+
+			if (freq > maxFreq) {
+				maxFreq = freq;
+				maxWord = word;
+			}
+			if (freq < minFreq) {
+				minFreq = freq;
+				minWord = word;
+			}
+		}
+
+		System.out.println("String Max Occurrence: " + maxWord + " (count: " + maxFreq + ")");
+		System.out.println("String Min Occurrence: " + minWord + " (count: " + minFreq + ")");
+	}
 }
