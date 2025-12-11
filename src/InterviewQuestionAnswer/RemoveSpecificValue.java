@@ -6,9 +6,28 @@ import java.util.Set;
 public class RemoveSpecificValue {
 
 	public static void main(String[] args) {
-		removeDuplicayInArray();
+		removeSpecificValueInInteger();
 	}
 
+	public static void removeSpecificValueInInteger()
+	{
+		int[] arr = { 100, 5, 1, 2, 3, 2, 1, 4, 5 };
+		int num=100;
+		int temp=0;
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i] != num)
+			{
+				arr[temp++] = arr[i];
+			}
+		}
+		
+		for(int i=0;i<temp;i++)
+		{
+			System.out.print(arr[i]+ " ");
+		}
+	}
 	public static void removeDuplicayInArrayUsingSet() {
 		try {
 
@@ -100,7 +119,7 @@ public class RemoveSpecificValue {
 
 			for (int j = 0; j < temp; j++) {
 				System.out.print(numArr[j]);
-
+ 
 			}
 
 		} catch (Exception e) {

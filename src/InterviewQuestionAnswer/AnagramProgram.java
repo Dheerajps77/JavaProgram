@@ -89,7 +89,7 @@ public class AnagramProgram {
 	}
 	
 	public static boolean StringAnagram() {
-		boolean flag = true;
+		boolean flag = false;
 		try {
 			String str = "damam";
 			String str2 = "madam";

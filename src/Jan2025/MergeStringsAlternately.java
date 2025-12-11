@@ -4,7 +4,33 @@ public class MergeStringsAlternately {
 	
 	
 	public static void main(String[] args) {
-		mergeAlternatelyStrings();
+		mergeAlternatelyStringsWhenLengthIsNotEqual();
+	}
+	
+	public static void mergeAlternatelyStringsWhenLengthIsNotEqual()
+	{
+		try {
+			String word1 = "abc";
+	        String word2 = "pqr123";
+
+	        StringBuilder builder = new StringBuilder();
+	        int maxLength = Math.max(word1.length(), word2.length());
+
+	        // Loop through both strings up to the maximum length
+	        for (int i = 0; i < maxLength; i++) {
+	            if (i < word1.length()) {
+	                builder.append(word1.charAt(i));
+	            }
+	            if (i < word2.length()) {
+	                builder.append(word2.charAt(i));
+	            }
+	        }
+
+	        System.out.println(builder.toString()); // Output: apbqcr123
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	public static void mergeAlternatelyStrings()

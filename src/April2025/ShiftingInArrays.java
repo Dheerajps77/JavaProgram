@@ -26,7 +26,7 @@ public class ShiftingInArrays {
 				arr[temp++] = 0;
 			}
 
-			System.out.print("\nZero moved to Right : "); // -1 3 -2 4 5 -6 0 0 0 
+			System.out.print("\nZero moved to Right : "); // -1 3 -2 4 5 -6 0 0 0
 			for (int k = 0; k < temp; k++) {
 				System.out.print(arr[k] + " ");
 			}
@@ -57,7 +57,7 @@ public class ShiftingInArrays {
 				arr[i] = 0;
 			}
 
-			System.out.print("\nZero moved to left : "); // 0 0 0 -1 3 -2 4 5 -6 
+			System.out.print("\nZero moved to left : "); // 0 0 0 -1 3 -2 4 5 -6
 			for (int k : arr) {
 				System.out.print(k + " ");
 			}
@@ -92,7 +92,7 @@ public class ShiftingInArrays {
 				}
 			}
 
-			System.out.print("\nZero moved to left using Another Way: "); // 0 0 0 -1 3 -2 4 5 -6 
+			System.out.print("\nZero moved to left using Another Way: "); // 0 0 0 -1 3 -2 4 5 -6
 			for (int k : result) {
 				System.out.print(k + " ");
 			}

@@ -3,9 +3,32 @@ package March2025;
 public class RemoveDuplicateElementsInArray {
 
 	public static void main(String[] args) {
-		removeDuplicateCharacters();
+		test();
 	}
 	
+	
+	public static void test() {
+		int[] arr = { 35, 64, 3, 5, 56, 7, 8, 8, 9, 8, 6, 4, 3 };
+		int[] arr1 = new int[arr.length];
+		int temp = 0;
+		for (int i = 0; i < arr.length; i++) {
+			boolean flag = false;
+			for (int j = 0; j < temp; j++) {
+				if (arr1[j] == arr[i]) {
+					flag = true;
+					break;
+				}
+			}
+
+			if (!flag) {
+				arr1[temp++] = arr[i];
+			}
+		}
+
+		for (int k = 0; k < temp; k++) {
+			System.out.print(arr1[k] + " ");
+		}
+	}
 	public static void removeDuplicateValueInString() {
 		try {
 

@@ -57,7 +57,7 @@ public class FindDuplicateElementsUsingMap {
 			StringBuilder builder = new StringBuilder();
 			
 			for (int i = 0; i < charArr.length; i++) {
-				if ((charArr[i] >= 'A' && charArr[i] < 'Z') || (charArr[i] >= 'a' && charArr[i] <= 'z')
+				if ((charArr[i] >= 'A' && charArr[i] <= 'Z') || (charArr[i] >= 'a' && charArr[i] <= 'z')
 						|| (charArr[i] == ' ')) {
 					newString = newString + charArr[i]; // Can be use StringBuilder instead
 					// 

@@ -3,11 +3,40 @@ package March2025;
 public class FindUniqueElementsInArray {
 
 	public static void main(String[] args) {
-		printUnqiueCharValue();
+		// printUnqiueCharValue();
 		// removeDuplicateValueInString();
-
+		 test();
+		// printUnqiueStringValue();
 	}
 
+	
+	public static void test() {
+		String str = "I am new in this world I will be new to some other world";
+		String[] strArr = str.split(" ");
+		String[] newStrArr = new String[strArr.length];
+		int temp = 0;
+		for (int i = 0; i < strArr.length; i++) {
+			if (strArr[i].equals(" "))
+				continue;
+
+			boolean uniqueFlag = false;
+			for (int j = 0; j < strArr.length; j++) {
+				if (i != j && strArr[i].equalsIgnoreCase(strArr[j])) {
+					uniqueFlag = true;
+					break;
+				}
+			}
+
+			if (!uniqueFlag) {
+				newStrArr[temp++] = strArr[i];
+			}			
+		}
+		
+		for (int k = 0; k < temp; k++) {
+			System.out.print(newStrArr[k] + " "); // am in this will be to some other 
+		}
+	}
+	
 	public static void checkUniqueValueInString() {
 		try {
 
