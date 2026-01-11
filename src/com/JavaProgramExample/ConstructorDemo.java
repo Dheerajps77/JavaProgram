@@ -1,5 +1,4 @@
 package com.JavaProgramExample;
-
 public class ConstructorDemo {
 	
 	
