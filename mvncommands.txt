@@ -1,0 +1,15 @@
+Maven Build Life Cycle (Default) – Key Phases in Selenium Projects
+
+validate – Validates the project is correct and all necessary information is available.
+
+compile – Compiles the source code of the project (src/main/java).
+
+test – Runs unit tests (or automated tests like Selenium) using a testing framework like TestNG, JUnit, or Cucumber. These are usually in src/test/java.
+
+package – Packages the compiled code (e.g., into a JAR or WAR file).
+
+verify – Runs checks on test results and other verification steps.
+
+install – Installs the packaged code into the local Maven repository.
+
+deploy – Copies the final package to a remote repository (used in CI/CD pipelines).
